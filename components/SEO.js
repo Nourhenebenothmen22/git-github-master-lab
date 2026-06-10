@@ -2,7 +2,8 @@ import { NextSeo } from "next-seo";
 
 export default function SEO({ title, description, path = "" }) {
   const fullTitle = `${title} | Git & GitHub Master Lab`;
-  const url = `https://git-github-master-lab.github.io${path}`;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nourhenebenothmen22.github.io/git-github-master-lab";
+  const url = `${siteUrl}${path}`;
   return (
     <NextSeo
       title={fullTitle}
