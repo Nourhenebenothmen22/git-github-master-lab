@@ -206,6 +206,7 @@ export const commandCategories = [
     name: "Démarrage",
     icon: "01",
     commands: [
+      { command: "git --version", description: "Vérifie que Git est installé et affiche sa version.", example: "git --version" },
       { command: "git init", description: "Initialise un dépôt dans le dossier courant.", example: "git init" },
       { command: "git clone <url>", description: "Copie un dépôt distant et son historique.", example: "git clone https://github.com/user/projet.git" },
       { command: "git config", description: "Configure l'identité et le comportement de Git.", example: "git config --global user.name \"Ada Lovelace\"" }
@@ -238,6 +239,7 @@ export const commandCategories = [
     commands: [
       { command: "git branch", description: "Liste, crée ou supprime les branches.", example: "git branch -d feature/login" },
       { command: "git switch", description: "Change de branche ou en crée une.", example: "git switch -c feature/login" },
+      { command: "git checkout", description: "Ancienne commande pour changer de branche ou restaurer un fichier.", example: "git checkout main" },
       { command: "git merge", description: "Intègre une branche dans la branche courante.", example: "git merge feature/login" },
       { command: "git rebase", description: "Rejoue des commits sur une nouvelle base.", example: "git rebase main" }
     ]
@@ -260,7 +262,10 @@ export const commandCategories = [
       { command: "git tag", description: "Marque un commit comme une version.", example: "git tag -a v1.0.0 -m \"Release\"" },
       { command: "git revert", description: "Crée un commit qui annule un commit existant.", example: "git revert a1b2c3d" },
       { command: "git reset", description: "Déplace HEAD ou modifie le staging.", example: "git reset --soft HEAD~1" },
-      { command: "git cherry-pick", description: "Applique un commit précis sur la branche courante.", example: "git cherry-pick a1b2c3d" }
+      { command: "git cherry-pick", description: "Applique un commit précis sur la branche courante.", example: "git cherry-pick a1b2c3d" },
+      { command: "git clean", description: "Supprime les fichiers non suivis après prévisualisation.", example: "git clean -nd" },
+      { command: "git rm", description: "Supprime un fichier suivi et prépare cette suppression.", example: "git rm ancien-fichier.js" },
+      { command: "git mv", description: "Déplace ou renomme un fichier suivi.", example: "git mv app.js src/app.js" }
     ]
   }
 ];
