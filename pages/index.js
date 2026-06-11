@@ -7,7 +7,7 @@ const learn = [
   ["terminal", "Les fondamentaux", "Comprendre les trois états de Git, les commits et l'historique."],
   ["book", "Un workflow propre", "Travailler avec des branches courtes et des commits utiles."],
   ["github", "La collaboration", "Synchroniser GitHub, ouvrir des Pull Requests et faire des reviews."],
-  ["flask", "La pratique", "Résoudre 10 labs guidés avant un projet final en autonomie."]
+  ["flask", "La pratique", "Résoudre 25 labs guidés avant un projet final en autonomie."]
 ];
 
 const path = [
@@ -15,6 +15,12 @@ const path = [
   ["02", "Mémoriser", "Une bibliothèque filtrable des commandes indispensables."],
   ["03", "Pratiquer", "Des labs avec terminal simulé et feedback immédiat."],
   ["04", "Maîtriser", "Un projet final complet proche d'un vrai workflow d'équipe."]
+];
+
+const advanced = [
+  ["12", "Scénarios réels", "Diagnostiquer les erreurs classiques, du premier git init au commit récupéré avec reflog."],
+  ["13", "Domaines IT", "Comprendre comment Git s'intègre au Web, DevOps, Data, IA, QA, Cloud et Open Source."],
+  ["15", "Erreurs expliquées", "Identifier la cause, appliquer une solution rapide puis adopter une prévention professionnelle."]
 ];
 
 export default function Home() {
@@ -37,7 +43,7 @@ export default function Home() {
             <div className="hero-stats">
               <div><strong>20</strong><span>chapitres</span></div>
               <div><strong>25+</strong><span>commandes</span></div>
-              <div><strong>10</strong><span>labs corrigés</span></div>
+              <div><strong>25</strong><span>labs corrigés</span></div>
             </div>
           </div>
           <div className="hero-terminal">
@@ -87,6 +93,22 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section container">
+        <div className="section-heading">
+          <span className="kicker">NOUVEAU GUIDE AVANCÉ</span>
+          <h2>Comprendre les situations, pas seulement les commandes</h2>
+          <p>Explorez la théorie essentielle, GitHub en entreprise, les erreurs fréquentes et les workflows de chaque domaine IT.</p>
+        </div>
+        <div className="advanced-preview">
+          {advanced.map(([number, title, text]) => (
+            <article key={title}><strong>{number}</strong><h3>{title}</h3><p>{text}</p></article>
+          ))}
+        </div>
+        <div className="center-action">
+          <Link href="/guide-avance" className="button primary">Explorer le guide avancé <Icon name="arrow" size={17} /></Link>
         </div>
       </section>
 

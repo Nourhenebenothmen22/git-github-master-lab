@@ -8,6 +8,7 @@ const links = [
   ["/", "Accueil"],
   ["/cours", "Cours"],
   ["/commandes", "Commandes Git"],
+  ["/guide-avance", "Guide avancé"],
   ["/labs", "Labs corrigés"],
   ["/lab-final", "Lab final"],
   ["/cheat-sheet", "Cheat Sheet"]

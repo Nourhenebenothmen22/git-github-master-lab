@@ -16,6 +16,7 @@ export default function Footer() {
           <h3>Explorer</h3>
           <Link href="/cours">Les 20 chapitres</Link>
           <Link href="/commandes">Commandes Git</Link>
+          <Link href="/guide-avance">Guide avancé</Link>
           <Link href="/labs">Labs corrigés</Link>
         </div>
         <div>
